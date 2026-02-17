@@ -1,0 +1,125 @@
+# ============================================
+# Python Network ML Project - Git Ignore
+# ============================================
+
+# ===== DATA FILES =====
+# Large datasets (keep structure, ignore files)
+data/*.csv
+data/*.txt
+data/*.json
+!data/.gitkeep
+
+# Raw data folder
+data/raw/*.csv
+data/raw/*.txt
+
+# ===== MODEL ARTIFACTS =====
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.joblib
+!models/.gitkeep
+
+# ===== RESULTS & OUTPUTS =====
+results/*.png
+results/*.jpg
+results/*.pdf
+results/*.csv
+results/*.json
+!results/.gitkeep
+
+# ===== PYTHON =====
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Spyder
+.spyderproject
+.spyproject
+
+# ===== SYSTEM FILES =====
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ===== LOGS =====
+*.log
+logs/
+
+# ===== TEMPORARY FILES =====
+*.tmp
+*.bak
+*.swp
+*~
+
+# ===== CREDENTIALS =====
+.env
+.env.local
+credentials.json
+config.secret.json
+
+# ===== MISCELLANEOUS =====
+*.zip
+*.tar.gz
+*.rar
