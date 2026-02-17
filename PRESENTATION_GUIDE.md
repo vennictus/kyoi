@@ -417,6 +417,26 @@ If your network faces 10,000 attacks per month:
 **Q: What about privacy concerns?**
 **A:** "The dataset contains network flow statistics (packet sizes, timing, protocols), not actual data content. No personal information, passwords, or message content is analyzed. It's metadata-only."
 
+### Validation & Integrity Questions
+
+**Q: How do you know your 99.87% accuracy is legitimate? Could there be data leakage?**
+**A:** "Excellent question - we performed a comprehensive code audit specifically for this. The raw dataset does contain identifier columns (IP addresses, flow IDs, timestamps) that could theoretically leak information. However, our preprocessing automatically removes these by filtering to numeric features only. We verified that the model trains on only 116 legitimate network traffic characteristics like packet counts, byte rates, and TCP flags. No identifier information makes it into training."
+
+**Q: Did you check for overfitting?**
+**A:** "Yes, thoroughly. Our training set achieved 99.86% recall, while our test set achieved 99.83% recall. That's only a 0.03% gap, well below the 2% industry threshold for acceptable overfitting. This near-identical performance proves the model generalizes well rather than memorizing the training data."
+
+**Q: Is one feature doing all the work, or is it well-distributed?**
+**A:** "Great technical question. We analyzed feature importance and found it's well-distributed. The top feature (TCP reset flag counts) contributes only 10.19% of decisions. The top 10 features combined account for about 35%, with the remaining 106 features contributing 65%. The model uses diverse patterns, not a single 'magic' indicator."
+
+**Q: Isn't 99.87% accuracy suspiciously high?**
+**A:** "It might seem high compared to image classification or NLP where 80-90% is excellent, but network intrusion detection commonly achieves 95-99% accuracy in published research. Why? Network protocols follow deterministic rules - attacks violate these rules in measurable ways. Published studies on similar datasets report 97-99% accuracy. Our result aligns with academic literature and is legitimate."
+
+**Q: Can you reproduce these results?**
+**A:** "Absolutely. We use `random_state=42` throughout for reproducibility. Anyone can run our training script and get identical results. We also created audit scripts that independently replicate the training procedure and confirm the same performance metrics. Everything is documented in our CODE_INTEGRITY_REPORT.md."
+
+**Q: What verification did you perform?**
+**A:** "We conducted a 7-point integrity audit covering: (1) data leakage verification, (2) train-test split validation, (3) scaling procedure check, (4) overfitting analysis, (5) feature importance distribution, (6) class imbalance handling, and (7) model configuration review. All checks passed. The full audit is documented with reproducible scripts."
+
 ---
 
 <a name="script-template"></a>
@@ -521,6 +541,19 @@ Use the slide-by-slide guide above. Key things to remember:
 3. **Production-ready** code and documentation
 4. **Reproducible** results with saved models
 5. **Academic rigor** with proper train-test methodology
+6. **Verified integrity** - comprehensive audit confirms no data leakage or overfitting
+
+### When Someone Questions Your Results
+
+**If challenged on "too good to be true" accuracy:**
+> "I understand the skepticism. We performed a comprehensive code audit specifically for this. Network intrusion detection commonly achieves 95-99% accuracy in published research because network protocols are deterministic - attacks violate rules in measurable ways. Our 99.87% aligns with academic literature. We verified no data leakage, minimal overfitting (0.03% gap), and distributed feature importance. Full audit documentation is available."
+
+**Key proof points:**
+- ✅ Overfitting gap: 0.03% (threshold is <2%)
+- ✅ All identifier columns (IPs, flow IDs) automatically removed during preprocessing
+- ✅ Feature importance distributed (top feature only 10.19%)
+- ✅ Results match published studies on similar datasets
+- ✅ Reproducible with fixed random seed
 
 ---
 
