@@ -1,4 +1,4 @@
-# 🛡️ AI-Based Network Traffic Classification for Cybersecurity
+# AI-Based Network Traffic Classification for Cybersecurity
 
 > **Automated Binary Classification System for Network Intrusion Detection**
 
@@ -10,15 +10,15 @@ An AI-powered cybersecurity solution that automatically classifies network traff
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 ### Objectives
 
 This project implements a production-grade binary classification system to:
-- ✅ Automatically detect malicious network traffic with high accuracy
-- ✅ Minimize false positives while maximizing threat detection
-- ✅ Process large-scale network traffic data (2.4M+ samples)
-- ✅ Provide explainable and reproducible results
+- Automatically detect malicious network traffic with high accuracy
+- Minimize false positives while maximizing threat detection
+- Process large-scale network traffic data (2.4M+ samples)
+- Provide explainable and reproducible results
 
 ### Problem Statement
 
@@ -26,7 +26,7 @@ An AI-based cybersecurity company aims to automatically classify network traffic
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 ### Source
 CICIDS-based Network Intrusion Detection Dataset containing real-world network traffic patterns.
@@ -49,18 +49,18 @@ CICIDS-based Network Intrusion Detection Dataset containing real-world network t
 
 ---
 
-## 🏆 Results
+## Results
 
 ### Best Model: Random Forest Classifier
 
 | Metric | Score | Industry Standard | Status |
 |--------|-------|-------------------|--------|
-| **Accuracy** | **99.76%** | >95% | ✅ Exceeds |
-| **Precision** | **99.24%** | >90% | ✅ Exceeds |
-| **Recall (Malicious)** | **99.87%** | >90% | ✅ Exceeds |
-| **F1-Score** | **0.9956** | >0.90 | ✅ Exceeds |
-| **ROC-AUC** | **1.0000** | >0.95 | ✅ Perfect |
-| **False Positive Rate** | **0.28%** | <5% | ✅ Exceeds |
+| **Accuracy** | **99.76%** | >95% | Exceeds |
+| **Precision** | **99.24%** | >90% | Exceeds |
+| **Recall (Malicious)** | **99.87%** | >90% | Exceeds |
+| **F1-Score** | **0.9956** | >0.90 | Exceeds |
+| **ROC-AUC** | **1.0000** | >0.95 | Perfect |
+| **False Positive Rate** | **0.28%** | <5% | Exceeds |
 
 ### Confusion Matrix (Test Set: 487,139 samples)
 
@@ -78,14 +78,14 @@ Actual  Benign   356,150   995        (99.72% correctly identified)
 
 ---
 
-## 🧠 Machine Learning Pipeline
+## Machine Learning Pipeline
 
 ### Model Comparison
 
 | Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |-------|----------|-----------|--------|----------|---------|
 | **Logistic Regression** | 93.25% | 81.01% | 97.57% | 0.8852 | 0.9902 |
-| **Random Forest** ⭐ | **99.76%** | **99.24%** | **99.87%** | **0.9956** | **1.0000** |
+| **Random Forest** | **99.76%** | **99.24%** | **99.87%** | **0.9956** | **1.0000** |
 
 ### Training Process
 
@@ -140,7 +140,7 @@ network-ml-project/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -212,41 +212,41 @@ print(f"Detected {sum(predictions)} malicious flows")
 
 ---
 
-## 📈 Performance Visualizations
+## Performance Visualizations
 
 The project generates comprehensive visualizations:
-- ✅ Confusion matrices for both models
-- ✅ ROC curves with AUC scores
-- ✅ Model performance comparison charts
-- ✅ Feature importance rankings
+-  Confusion matrices for both models
+-  ROC curves with AUC scores
+-  Model performance comparison charts
+-  Feature importance rankings
 
 See `results/binary_classification_evaluation.png` for complete visual analysis.
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - **[FINAL_REPORT.md](FINAL_REPORT.md)**: Comprehensive technical report with methodology and results
 - **[PROJECT_ALIGNMENT_AUDIT.md](PROJECT_ALIGNMENT_AUDIT.md)**: Requirements compliance verification
 
 ---
 
-## ✅ Project Compliance
+## Project Compliance
 
 This project fully satisfies all academic requirements:
-- ✅ Binary classification (Benign vs. Malicious)
-- ✅ Data preprocessing and feature engineering
-- ✅ Multiple supervised learning models
-- ✅ Comprehensive evaluation metrics
-- ✅ Production-ready implementation
-- ✅ Complete documentation
+-  Binary classification (Benign vs. Malicious)
+-  Data preprocessing and feature engineering
+-  Multiple supervised learning models
+-  Comprehensive evaluation metrics
+-  Production-ready implementation
+-  Complete documentation
 
 **Academic Summary Statement:**
 > Binary classification model achieved **99.87% recall** for malicious traffic with **ROC-AUC of 1.0000**. The Random Forest model demonstrates exceptional performance in distinguishing between benign and malicious network traffic, with an overall accuracy of **99.76%** on the test set.
 
 ---
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 - [ ] Deploy model as REST API service
 - [ ] Implement real-time streaming inference
@@ -257,25 +257,22 @@ This project fully satisfies all academic requirements:
 
 ---
 
-## 📜 License
+## License
 
 This project is developed for **academic and educational purposes**.
 
 ---
 
-## 👥 Contributors
+## Contributors
 
-**Cybersecurity ML Research Team**  
+**Team 24**  
 *Academic Project - 2026*
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - CICIDS dataset providers
 - scikit-learn community
 - Cybersecurity research community
 
----
-
-**⭐ If you found this project helpful, please consider giving it a star!**
